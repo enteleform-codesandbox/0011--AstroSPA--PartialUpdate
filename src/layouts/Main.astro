@@ -1,0 +1,44 @@
+---
+
+	import "./Main.scss"
+	import {Spa}   from "astro-spa"
+	import Sidebar from "../components/Sidebar.astro"
+
+---
+
+
+
+<html>
+
+	<head>
+	</head>
+
+	<body>
+
+		<Sidebar/>
+
+		<main>
+			<slot/>
+		</main>
+
+		<!--###  [yes] loads page          ###-->
+		<!--###  [no ] avoids style flash  ###-->
+		<!--###  [no ] persists `nav`      ###-->
+		<!--<Spa
+			defaultAnimation  = {false}
+			scrollIntoView    = {false}
+			progressBar       = {false}
+		/>-->
+
+		<!--###  [no ] loads page          ###-->
+		<!--###  [yes] avoids style flash  ###-->
+		<!--###  [yes] persists `nav`      ###-->
+		<Spa
+			defaultAnimation  = {false }
+			scrollIntoView    = {false }
+			progressBar       = {false }
+			containerSelector = {"main"}
+		/>
+
+	</body>
+</html>

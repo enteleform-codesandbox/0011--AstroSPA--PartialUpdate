@@ -1,0 +1,46 @@
+
+html,
+body{
+	width:  100%;
+	height: 100%;
+	margin: 0;
+}
+
+body{
+	display:               grid;
+	grid-template-columns: 1fr 3fr;
+	background:            #111;
+	color:                 #555;
+}
+
+nav{
+	display:        flex;
+	flex-direction: column;
+	padding:        1rem;
+	background:     #333;
+	color:          #777;
+	overflow:       auto;
+}
+
+nav > a{
+	min-height:      40vh;
+	margin:          1rem;
+	padding:         1rem;
+	background:      #555;
+	color:           #999;
+	text-decoration: none;
+	font-size:       1.15rem;
+	text-align:      center;
+}
+
+main{
+	padding: 1rem;
+}
+
+main > h1:first-of-type{
+	margin-top: 0;
+}
+
+*{
+	font-family: monospace;
+}
